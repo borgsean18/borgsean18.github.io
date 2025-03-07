@@ -1,3 +1,8 @@
+import 'bootstrap-icons/font/bootstrap-icons.css';
+console.log("imported bootstrap icons")
+
+import '../styles/main.css';
+
 // Mobile Menu Toggle
 const mobileMenu = document.querySelector('.mobile-menu');
 const nav = document.querySelector('nav');

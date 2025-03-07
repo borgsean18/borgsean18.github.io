@@ -1,40 +1,47 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // Entry point for your application
-  entry: './index.js',
+  entry: './js/script.js',
 
-  // Output configuration
   output: {
-    filename: 'bundle.js', // Output bundle file name
-    path: path.resolve(__dirname, 'dist'), // Output directory
-    clean: true, // Clean the output directory before each build
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
 
-  // Module rules for handling different file types
   module: {
     rules: [
       {
-        test: /\.css$/, // Apply to .css files
-        use: ['style-loader', 'css-loader'], // Use these loaders
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(woff|woff2|eot|ttf|svg)$/, // Handle font files
-        type: 'asset/resource', // Use Webpack 5's built-in asset module
+        test: /\.(woff|woff2|eot|ttf|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
       },
     ],
   },
 
-  // Development server configuration (optional)
+  // Plugins
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html', 
+      filename: 'index.html',
+    }),
+  ],
+
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'), // Serve files from the dist folder
+      directory: path.join(__dirname, 'dist'),
     },
-    compress: true, // Enable gzip compression
-    port: 9000, // Port for the dev server
-    open: true, // Open the browser automatically
+    compress: true,
+    port: 9000,
+    open: true,
   },
 
-  // Mode (development or production)
-  mode: 'development', // Change to 'production' for optimized builds
+  mode: 'development',
 };
