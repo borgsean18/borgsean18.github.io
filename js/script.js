@@ -1,4 +1,4 @@
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import '../node_modules/bootstrap-icons/font/bootstrap-icons.css';
 console.log("imported bootstrap icons")
 
 import '../styles/main.css';
