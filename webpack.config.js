@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './js/script.js',
@@ -31,6 +32,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './index.html', 
       filename: 'index.html',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: 'node_modules/bootstrap-icons/font/bootstrap-icons.css',
+          to: 'css/bootstrap-icons.css',
+        },
+        {
+          from: 'node_modules/bootstrap-icons/font/fonts',
+          to: 'fonts',
+        },
+      ],
     }),
   ],
 
