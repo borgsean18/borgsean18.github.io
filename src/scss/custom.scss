@@ -108,6 +108,7 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    border-bottom: 2px solid var(--primary);
 }
 
 .header-container {
@@ -170,15 +171,15 @@ nav ul li a:hover::after {
 
 /* Hero Section */
 .hero {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(to right, rgba(40, 44, 52, 0.9), rgba(40, 44, 52, 0.7)), url('https://images.unsplash.com/photo-1739489884103-7922d568062f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center / cover no-repeat;
-    color: white;
+    background: linear-gradient(to right, rgba(40, 44, 52, 0.9), rgba(40, 44, 52, 0.7)), url(https://images.unsplash.com/photo-1739489884103-7922d568062f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D) center / cover no-repeat;
+    color: #fff;
     margin-top: 0;
-    padding-top: 80px;
+    padding-top: 90px;
     border-radius: 0 0px 30px 30px;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px #000;
     margin-bottom: 10px;
 }
 
