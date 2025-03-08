@@ -499,6 +499,8 @@ nav ul li a:hover::after {
 
 .contact-details {
     margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .contact-item {
@@ -739,6 +741,11 @@ footer {
         color: white;
         font-size: 24px;
         cursor: pointer;
+    }
+
+    .contact-details {
+        margin-top: 30px;
+        display: block;
     }
 }
 
