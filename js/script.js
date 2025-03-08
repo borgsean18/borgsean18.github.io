@@ -48,6 +48,23 @@ filterButtons.forEach(button => {
     });
 });
 
+// Concent
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if user has already made a cookie choice
+    if (!localStorage.getItem('cookieConsent')) {
+        // Show cookie consent popup after a short delay
+        setTimeout(function() {
+            document.querySelector('.cookie-consent').classList.add('active');
+        }, 1000);
+    }
+
+    // Accept button event
+    document.querySelector('.cookie-accept').addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        document.querySelector('.cookie-consent').classList.remove('active');
+    });
+});
+
 // Get the current year
 const currentYear = new Date().getFullYear();
 document.getElementById('current-year').textContent = currentYear;
