@@ -1,4 +1,22 @@
-@use "imports.scss";
+// Base styles
+@import 'base/custom';
+@import 'base/concent';
 
-@use "concent.scss";
-@use "custom.scss";
+// Utils
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/navigation';
+
+// Pages
+@import 'pages/home';
+
+// Vendors
+@import 'vendors/bootstrap-icons';
